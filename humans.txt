@@ -2,12 +2,12 @@
 # The humans responsible & technology colophon
 
 # TEAM
+	
+	Julien Deswaef -- web designer -- @xuv
+	Carl Roosens -- Dessinateur
+	Jean-François Jacobs -- Écrivain
+	Pascal Mohy -- Musicien
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
 
 # TECHNOLOGY COLOPHON
 
