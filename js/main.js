@@ -13,10 +13,10 @@ function init(){
 		$(".info").fadeToggle(1000);
 	});
 	aphorismes = $(".aphorisme");
-	aphorismeSet = creeSet(5); //66
+	aphorismeSet = creeSet(66); //66
 	dessins = $(".dessin");
-	dessinSet = creeSet(5); //66
-	sonSet = creeSet(5); //59
+	dessinSet = creeSet(66); //66
+	sonSet = creeSet(59); //59
 	actuel = $(".titre");
 };
 
@@ -37,7 +37,7 @@ function randomDessin() {
 function randomSound() {
 	if (soundLength == 14 ){
 		var rnd = Math.floor(Math.random()*sonSet.length);
-		switch (rnd) {
+		switch (sonSet[rnd]) {
 			case 56:
 				soundLength = 28;
 				break;
@@ -101,23 +101,27 @@ function chargeLesDessins(dessinACharger) {
 
 function chargeLesSons() {
 	$("#indicator > #soundload").html("Chargement des sons: 0%");
-	for (i=0; i<59; i++){
-	    sons[i] = soundManager.createSound({
-	    	id: 'snd-' + i ,
-	    	url: 'snd/ogg/'+ (i+1) + '.ogg',
-	    	autoLoad: true,
-	    	onload: function(success) {
-	    		if(success) {
-	  				$("#indicator > #soundload").html("Chargement des sons: "+ Math.round((i/59.0)*100) + "%");
-					if(this.id == 'snd-58'){
-						$("#indicator > #soundload").fadeOut(1000, function() {	
-							soundReady = 1;
-						});
-					};
-				};
-			}
-	    });
-	};
+	chargeUnSon(0);
+}
+
+function chargeUnSon(i) {
+    sons[i] = soundManager.createSound({
+    	id: 'snd-' + i ,
+    	url: 'snd/ogg/'+ (i+1) + '.ogg',
+    	autoLoad: true,
+    	onload: function(success) {
+    		if(success) {
+  				$("#indicator > #soundload").html("Chargement des sons: "+ Math.round((i/58.0)*100) + "%");
+				if(this.id == 'snd-58'){
+					$("#indicator > #soundload").fadeOut(1000, function() {	
+						soundReady = 1;
+					});
+				} else {
+					chargeUnSon(i+1);
+				}
+			};
+		}
+	});
 }
 
 function creeSet(nb) {
