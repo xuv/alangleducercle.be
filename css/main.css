@@ -121,11 +121,11 @@ body {
 
 .aphorisme {
     position: relative;
-    font-size: 50%;
+    font-size: 40%;
     top: 0px;
     left: 0px;
-    margin: 20% 0px;
-    padding: 15% 10%;
+    margin: 25% 0%;
+    padding: 0% 10%;
     width: 80%;
 }
 
@@ -163,10 +163,12 @@ body {
 
 .actions a {
     color: #999;
+    text-decoration: none;
 }
 
 .actions a:hover {
     color: white;
+    text-decoration: underline;
 }
 
 
