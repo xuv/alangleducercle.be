@@ -105,7 +105,7 @@ function chargeLesDessins(dessinACharger) {
 
 function chargeLesSons() {
 	if (!buzz.isSupported()) {
-    	$("#indicator > #soundload").html("Votre navigateur est trop vieux jouer les sons. Merci de le mettre le à jour.");
+    	$("#indicator > #soundload").html("Votre navigateur ne peut pas jouer les sons.<br>Merci de le mettre à jour ou d'en utiliser un autre.").delay(3000).fadeOut(3000);
 	} else {
 		$("#indicator > #soundload").html("Chargement des sons: 0%");
 		chargeUnSon(0);
