@@ -8,6 +8,10 @@ var soundReady = 0; // 0: Avant chargement, 1: tous les sons sont chargés, 2: S
 var actuel; // élément actuellement affiché
 var display = 0; // 0: aphorisme, 1: dessin 
 
+buzz.defaults.autoplay = false;
+buzz.defaults.loop = false;
+buzz.defaults.formats = ['ogg'];
+
 function init(){
 	$("#info").click(function() {
 		$(".info").fadeToggle(1000);
@@ -100,26 +104,26 @@ function chargeLesDessins(dessinACharger) {
 };
 
 function chargeLesSons() {
-	$("#indicator > #soundload").html("Chargement des sons: 0%");
-	chargeUnSon(0);
+	if (!buzz.isSupported()) {
+    	$("#indicator > #soundload").html("Votre navigateur est trop vieux jouer les sons. Merci de le mettre le à jour.");
+	} else {
+		$("#indicator > #soundload").html("Chargement des sons: 0%");
+		chargeUnSon(0);
+	}
 }
 
 function chargeUnSon(i) {
-    sons[i] = soundManager.createSound({
-    	id: 'snd-' + i ,
-    	url: 'snd/ogg/'+ (i+1) + '.ogg',
-    	autoLoad: true,
-    	onload: function(success) {
-    		if(success) {
-  				$("#indicator > #soundload").html("Chargement des sons: "+ Math.round((i/58.0)*100) + "%");
-				if(this.id == 'snd-58'){
-					$("#indicator > #soundload").fadeOut(1000, function() {	
-						soundReady = 1;
-					});
-				} else {
-					chargeUnSon(i+1);
-				}
-			};
+	sons[i] = new buzz.sound("snd/" + (i+1) , { preload: true });
+	sons[i].bind("error", function(e) {
+    	alert("Error: " + this.getErrorMessage());
+	}).bind("loadeddata", function(e) {
+    	$("#indicator > #soundload").html("Chargement des sons: "+ Math.round((i/58.0)*100) + "%");
+		if(i == 58){
+			$("#indicator > #soundload").fadeOut(1000, function() {	
+				soundReady = 1;
+			});
+		} else {
+			chargeUnSon(i+1);
 		}
 	});
 }
@@ -142,29 +146,12 @@ function waitTillReady() {
 	}
 }
 
-soundManager.setup({
-  url: 'swf/',
-  useHTML5Audio : true,
-  debugFlash: false,
-  debugMode: false,
-  waitForWindowLoad: false,
-  onready: function() { 
-  	chargeLesSons(); 
-  },
-  ontimeout: function() {
-  	$("#indicator > #soundload")
-  		.html("Désolé, pas de son. Problème avec Flash?")
-  		.delay(3000)
-  		.fadeOut(3000);
-  	soundReady = 2;
-    // Hrmm, SM2 could not start. Missing SWF? Flash blocked? Show an error, etc.?
-  }
-});
 
 $(document).ready(function() {
 	var FullscreenrOptions = {  width: 1280, height: 1280, bgID: '#container' };
 	jQuery.fn.fullscreenr(FullscreenrOptions);
 	$("#container").fitText();
+	chargeLesSons();
 	chargeLesDessins(dessinUrlList);
 	$(".titre").animate({opacity: 1}, 3000);
 	waitTillReady();
