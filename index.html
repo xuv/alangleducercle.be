@@ -21,18 +21,8 @@
             <p class="chromeframe">Vous utilisez une version <strong>dépassée</strong> de votre navigateur. Merci de <a href="http://browsehappy.com/">mettre à jour</a> ou d'<a href="http://www.google.com/chromeframe/?redirect=true">activer la Google Chrome Frame</a>pour améliorer votre expérience du web.</p>
 
         <![endif]-->
-        <div id="topBar">
-            <div class="actions">
-                <a href="#" id="info">?</a>
-            </div>
-            <div id="indicator">
-                <div id="imgload"></div>
-                <div id="soundload"></div>
-            </div>
-        </div>
         <div id="container">
             <h1 class="titre">À l'angle du cercle</h1>
-
 
             <p class="aphorisme hidden">
                 Vivre, ce n’est que voir<br><br>
@@ -371,34 +361,68 @@
                 Plutôt que là-bas !
             </p>
         </div>
-        <div class="info">
-                <h2>À propos</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <div class="home">
+            <div class="info">
+                <div class="logo">
+                    <div id="logo"></div>
+                    <h1>À l'angle du cercle</h1>
+                </div>
+                <p class="numbers">
+                    66 aphorismes,<br>
+                    66 dessins,<br>
+                    58 moments musicaux,<br>
+                    ...associés aléatoirement.<br>
+                    252648 combinaisons. 
                 </p>
-                <h3>Crédits</h3>
+                <div class="play">
+                    <button class="button">Voir en ligne</button>
+                    <div id="indicator">
+                        <div id="imgload"></div>
+                        <div id="soundload"></div>
+                    </div>
+                </div>
                 <p>
+                    <blockquote>
+                        Le spectateur ne peut pas s'empêcher de faire des liens, il est un narrateur incessant.
+                    </blockquote>
+                    − Lev Koulechov
+                </p>
+                <div class="download">
+                    <button class="button">Télécharger</button>
+                </div>
+                <p class="support">Le projet représente, bout à bout, un mois de travail. Merci de nous soutenir en parlant de nous ou en versant ce que vous souhaitez sur le compte IBAN: BE74 3630 2425 6407 (BIC: BBRUBEBB) avec en communication A L ANGLE DU CERCLE.</p>
+                <h3>Crédits:</h3>
+                <p class="credits">
                     <ul>
-                        <li>Jean-François Jacobs : texte</li>
-                        <li>Carl Roosens : dessin</li>
-                        <li>Pascal Mohy: musique</li>
-                        <li>Julien Deswaef : code</li>
+                        <li>Texte : Jean-François Jacobs</li>
+                        <li>Dessin : Carl Roosens</li>
+                        <li>Musique : Pascal Mohy</li>
+                        <li>Code : Julien Deswaef</li>
                     </ul>
                 </p>
+                <p class="licenses">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/be/">
+                        <img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/2.0/be/80x15.png" />
+                    </a>
+                    Textes, dessins et code de <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">À l'angle du cercle</span> de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Jean-François Jacob, Carl Roosens et Julien Deswaef</span> sont mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/be/">licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 2.0 Belgique</a>
+                    <br>
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/be/">
+                        <img alt="Licence Creative Commons" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-nd/2.0/be/80x15.png" />
+                    </a>
+                    La musique de <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Sound" property="dct:title" rel="dct:type">À l'angle du cercle</span> de <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Pascal Mohy</span> est mis à disposition selon les termes de la <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.0/be/">licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 2.0 Belgique</a>
+                </p>
             </div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/vendor/buzz.js"></script>
         <script src="js/vendor/jquery.fullscreenr.js"></script>
         <script src="js/vendor/jquery.fittext.js"></script>
+        <script src="js/vendor/raphael-min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/logo.js"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-4875297-7'],['_trackPageview']];

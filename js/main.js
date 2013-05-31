@@ -7,6 +7,7 @@ var imgReady = false; // tous les dessins sont chargés
 var soundReady = 0; // 0: Avant chargement, 1: tous les sons sont chargés, 2: SoundManager pas chargé
 var actuel; // élément actuellement affiché
 var display = 0; // 0: aphorisme, 1: dessin 
+var play = false // Voir en ligne
 
 buzz.defaults.autoplay = false;
 buzz.defaults.loop = false;
@@ -138,8 +139,10 @@ function creeSet(nb) {
 
 function waitTillReady() {
 	// Attend surtout que les images soient complètement loadées.
-	if (imgReady && soundReady>0) {
+	if (play && imgReady && soundReady>0) {
 		init();
+		$('.info').hide();
+		$(".titre").animate({opacity: 1}, 3000);
 		setInterval("rotation()", 7000);
 	} else {
 		setTimeout("waitTillReady()", 1000);
@@ -153,6 +156,8 @@ $(document).ready(function() {
 	$("#container").fitText();
 	chargeLesSons();
 	chargeLesDessins(dessinUrlList);
-	$(".titre").animate({opacity: 1}, 3000);
 	waitTillReady();
+	$(".play button").click(function() {
+		play = true;
+	});
 });

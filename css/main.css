@@ -92,14 +92,45 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(railaway-200.woff) format('woff');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(railaway-400.woff) format('woff');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(railaway-700.woff) format('woff');
+}
+
 html {
     background-color: black;
     color: white;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     /*overflow: hidden;*/
+    font-family: 'Raleway', sans-serif;
 }
+
+a { 
+    color: #ffdb00;
+    text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
 
 #container {
     position: absolute;
@@ -114,19 +145,19 @@ body {
     font-size: inherit;
     top: 0px;
     left: 0px;
-    margin: 35% 0px;
+    margin: 40% 0px;
     text-align: center;
     color: #ffdb00;
 }
 
 .aphorisme {
     position: relative;
-    font-size: 40%;
+    font-size: 30%;
     top: 0px;
     left: 0px;
     margin: 25% 0%;
-    padding: 0% 10%;
-    width: 80%;
+    padding: 0% 5%;
+    width: 90%;
 }
 
 .dessin {
@@ -137,26 +168,71 @@ body {
     height: 100%;
 }
 
-.info {
+.home {
     position: absolute;
-    display: none;
-    z-index: 5;
-    margin: 0 15%;
-    padding: 5%;
-    width: 60%;
-    background-color: white;
-    color: black;
-    font-size: 0.9em;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    /*background-color: black;*/
+    color: white;
+    font-size: 0.9em; 
+    overflow: auto;
 }
 
-#indicator {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+.info {
+    margin: 0 auto;
+    padding: 0 5%;
+    max-width: 560px;
+}
+
+.info .logo {
+    height: 300px;
+}
+
+.info .logo #logo {
+    width: 200px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.info h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 400;
+    color: #ffdb00;
+}
+
+.info .numbers {
+    font-size: 2.5em;
+    line-height: 1.1em;
+    font-weight: 200;
+}
+
+.play .button{
+    font-size: 1.5em;
+}
+
+.play #indicator {
+    height: 2.5em;
+}
+
+.play, .download { text-align: center; }
+
+.info blockquote {
+    display: inline;
+    margin : 0;
+    /*font-style: italic;*/
+    font-weight: 700;
+}
+
+.info .licenses {
     font-size: 0.8em;
 }
 
-.actions {
+/*.actions {
     float: right;
     margin-right: 5px;
 }
@@ -169,12 +245,63 @@ body {
 .actions a:hover {
     color: white;
     text-decoration: underline;
+}*/
+
+/* 
+ * Button CSS taken from http://css3-buttons.heroku.com/generator   
+ */
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+border: none; }
+
+.button {
+    display: inline-block;
+    padding: 0.5em 2em 0.55em;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    border: solid 1px #cccccc;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    border: solid 1px #1c911c;
+    background-color: #1f9e1f;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2ad52a), to(#1f9e1f));
+    background: -moz-linear-gradient(top, #2ad52a, #1f9e1f);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2ad52a', endColorstr='#1f9e1f');
+    color: #e8f5e8;
+}
+.button:hover { text-decoration: none; }
+.button:active {
+    position: relative;
+    top: 1px;
+}
+.button:hover {
+    background-color: #1b891b;
+    background: -webkit-gradient(linear, left top, left bottom, from(#27c927), to(#1b891b));
+    background: -moz-linear-gradient(top, #27c927, #1b891b);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#27c927', endColorstr='#1b891b'); 
+}
+.button:active {
+    background-color: #27c927;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1f9e1f), to(#27c927));
+    background: -moz-linear-gradient(top, #1f9e1f, #27c927);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1f9e1f', endColorstr='#27c927');
+    color: #bbe1bb;
 }
 
-
-
-
-
+.button[disabled=disabled]{
+    background-color: grey;
+}
 
 
 
