@@ -19,6 +19,8 @@ Vous pouvez télécharger gratuitement ce diaporama aléatoire et ainsi le visio
 * Musique : Pascal Mohy
 * Code : Julien Deswaef
 
+Contactez-nous à l'adresse : bonjour @ alangleducercle . be
+
 ### Licences :
 
 Textes, dessins et code de *À l'angle du cercle* de Jean-François Jacob, Carl Roosens et Julien Deswaef sont mis à disposition selon les termes de la [licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 2.0 Belgique](http://creativecommons.org/licenses/by-sa/2.0/be/)
