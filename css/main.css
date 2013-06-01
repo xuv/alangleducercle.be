@@ -154,10 +154,11 @@ a:hover { text-decoration: underline; }
 
 .aphorisme {
     position: relative;
+    text-align: center;
     font-size: 30%;
     top: 0px;
     left: 0px;
-    margin: 25% 0%;
+    margin: 35% 0%;
     padding: 0% 5%;
     width: 90%;
 }

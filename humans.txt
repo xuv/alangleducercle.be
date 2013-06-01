@@ -3,10 +3,10 @@
 
 # TEAM
 	
-	Julien Deswaef -- web designer -- @xuv
-	Carl Roosens -- Dessinateur
-	Jean-François Jacobs -- Écrivain
-	Pascal Mohy -- Musicien
+	Julien Deswaef -- Code -- @xuv -- http://xuv.be
+	Carl Roosens -- Dessin
+	Jean-François Jacobs -- Texte
+	Pascal Mohy -- Musique
 
 
 # TECHNOLOGY COLOPHON
