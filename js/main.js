@@ -8,21 +8,20 @@ var soundReady = 0; // 0: Avant chargement, 1: tous les sons sont chargés, 2: S
 var actuel; // élément actuellement affiché
 var display = 0; // 0: aphorisme, 1: dessin 
 var play = false // Voir en ligne
+var intervalID; // L'id du setInterval qui sert à faire tourner le slideshow
 
 buzz.defaults.autoplay = false;
 buzz.defaults.loop = false;
 buzz.defaults.formats = ['ogg'];
 
 function init(){
-	$("#info").click(function() {
-		$(".info").fadeToggle(1000);
-	});
 	aphorismes = $(".aphorisme");
 	aphorismeSet = creeSet(66); //66
 	dessins = $(".dessin");
 	dessinSet = creeSet(66); //66
 	sonSet = creeSet(59); //59
 	actuel = $(".titre");
+	display = 0;
 };
 
 function randomAphorisme() {
@@ -141,7 +140,7 @@ function waitTillReady() {
 	// Attend surtout que les images soient complètement loadées.
 	if (imgReady && soundReady>0) {
 		init();
-		setInterval("rotation()", 7000);
+		intervalID = setInterval("rotation()", 7000);
 	} else {
 		setTimeout("waitTillReady()", 1000);
 	}
@@ -160,8 +159,20 @@ $(document).ready(function() {
 	var FullscreenrOptions = {  width: 1280, height: 1280, bgID: '#container' };
 	jQuery.fn.fullscreenr(FullscreenrOptions);
 	$("#container").fitText();
-	$(".play button").click(function() {
+	$(".play .button").click(function() {
 		$('body').fullscreen();
 		startShow();
+	});
+
+	/* Permet de revenir en arrière grace au bouton back... un peu skatchy quand même. */
+	$(window).hashchange( function(){
+		console.log( location.hash );
+		if ( location.hash != "#container" ) {
+			actuel.addClass("hidden");
+			init();
+			actuel = $(".titre").removeClass("hidden").css('opacity', 0);
+			$('.info').show();
+			clearInterval(intervalID);
+		}
 	});
 });
