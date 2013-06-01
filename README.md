@@ -23,4 +23,4 @@ Vous pouvez télécharger gratuitement ce diaporama aléatoire et ainsi le visio
 
 Textes, dessins et code de *À l'angle du cercle* de Jean-François Jacob, Carl Roosens et Julien Deswaef sont mis à disposition selon les termes de la [licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 2.0 Belgique](http://creativecommons.org/licenses/by-sa/2.0/be/)
 
-La musique de *À l'angle du cercle* de <Pascal Mohy est mis à disposition selon les termes de la [licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 2.0 Belgique](http://creativecommons.org/licenses/by-nc-nd/2.0/be/)
+La musique de *À l'angle du cercle* de Pascal Mohy est mis à disposition selon les termes de la [licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Pas de Modification 2.0 Belgique](http://creativecommons.org/licenses/by-nc-nd/2.0/be/)
