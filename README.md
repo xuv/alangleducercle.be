@@ -7,7 +7,7 @@
 ...associés aléatoirement.  
 252648 combinaisons.
 
-> Le spectateur ne peut pas s'empêcher de faire des liens, il est un narrateur incessant.
+> Le spectateur ne peut pas s'empêcher de faire des liens, il est un narrateur incessant.  
 − Lev Koulechov
 
 Le projet représente, bout à bout, un mois de travail. Merci de nous soutenir en parlant de nous ou en versant ce que vous souhaitez sur le compte IBAN: BE74 3630 2425 6407 (BIC: BBRUBEBB) avec en communication A L ANGLE DU CERCLE.
@@ -19,7 +19,7 @@ Le projet représente, bout à bout, un mois de travail. Merci de nous soutenir 
 * Musique : Pascal Mohy
 * Code : Julien Deswaef
 
-### Licenses :
+### Licences :
 
 Textes, dessins et code de *À l'angle du cercle* de Jean-François Jacob, Carl Roosens et Julien Deswaef sont mis à disposition selon les termes de la [licence Creative Commons Attribution -  Partage dans les Mêmes Conditions 2.0 Belgique](http://creativecommons.org/licenses/by-sa/2.0/be/)
 
