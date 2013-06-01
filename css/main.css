@@ -209,7 +209,7 @@ a:hover { text-decoration: underline; }
 }
 
 .info .numbers {
-    font-size: 2.5em;
+    font-size: 2.2em;
     line-height: 1.1em;
     font-weight: 200;
 }
@@ -218,8 +218,12 @@ a:hover { text-decoration: underline; }
     font-size: 1.5em;
 }
 
-.play #indicator {
-    height: 2.5em;
+#indicator {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    font-size: 12px;
 }
 
 .play, .download { text-align: center; }
@@ -240,20 +244,6 @@ a:hover { text-decoration: underline; }
     font-size: 0.8em;
 }
 
-/*.actions {
-    float: right;
-    margin-right: 5px;
-}
-
-.actions a {
-    color: #999;
-    text-decoration: none;
-}
-
-.actions a:hover {
-    color: white;
-    text-decoration: underline;
-}*/
 
 /* 
  * Button CSS taken from http://css3-buttons.heroku.com/generator   
