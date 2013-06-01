@@ -224,11 +224,16 @@ a:hover { text-decoration: underline; }
 
 .play, .download { text-align: center; }
 
+.download {
+    margin-top: 1.5em;
+}
+
 .info blockquote {
     display: inline;
     margin : 0;
     /*font-style: italic;*/
-    font-weight: 700;
+    font-size: 1.5em;
+    font-weight: 400;
 }
 
 .info .licenses {
