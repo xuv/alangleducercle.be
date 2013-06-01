@@ -139,14 +139,20 @@ function creeSet(nb) {
 
 function waitTillReady() {
 	// Attend surtout que les images soient complètement loadées.
-	if (play && imgReady && soundReady>0) {
+	if (imgReady && soundReady>0) {
 		init();
-		$('.info').hide();
-		$(".titre").animate({opacity: 1}, 3000);
 		setInterval("rotation()", 7000);
 	} else {
 		setTimeout("waitTillReady()", 1000);
 	}
+}
+
+function startShow() {
+	$('.info').hide();
+	$(".titre").animate({opacity: 1}, 3000);
+	chargeLesSons();
+	chargeLesDessins(dessinUrlList);
+	waitTillReady();
 }
 
 
@@ -154,11 +160,8 @@ $(document).ready(function() {
 	var FullscreenrOptions = {  width: 1280, height: 1280, bgID: '#container' };
 	jQuery.fn.fullscreenr(FullscreenrOptions);
 	$("#container").fitText();
-	chargeLesSons();
-	chargeLesDessins(dessinUrlList);
-	waitTillReady();
 	$(".play button").click(function() {
 		$('body').fullscreen();
-		play = true;
+		startShow();
 	});
 });
