@@ -7,10 +7,10 @@
 ...associés aléatoirement.  
 252648 combinaisons.
 
-> Le spectateur ne peut pas s'empêcher de faire des liens, il est un narrateur incessant.  
+> *Le spectateur ne peut pas s'empêcher de faire des liens, il est un narrateur incessant.*
 − Lev Koulechov
 
-Le projet représente, bout à bout, un mois de travail. Merci de nous soutenir en parlant de nous ou en versant ce que vous souhaitez sur le compte IBAN: BE74 3630 2425 6407 (BIC: BBRUBEBB) avec en communication A L ANGLE DU CERCLE.
+Vous pouvez télécharger gratuitement ce diaporama aléatoire et ainsi le visionner ou le diffuser sans connexion internet. Merci de soutenir les artistes en versant ce que vous voulez sur le compte IBAN: BE74 3630 2425 6407 (BIC: BBRUBEBB) avec en communication « A L ANGLE DU CERCLE » ainsi que votre adresse mail afin que l’on puisse vous remercier… Et surtout, n’hésitez pas à en parler autour de vous ! 
 
 ### Crédits :
 
