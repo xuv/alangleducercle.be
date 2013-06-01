@@ -123,6 +123,7 @@ body {
     padding: 0;
     /*overflow: hidden;*/
     font-family: 'Raleway', sans-serif;
+    background-color: black;
 }
 
 a { 
@@ -136,6 +137,7 @@ a:hover { text-decoration: underline; }
     position: absolute;
     margin: 0;
     padding: 0;
+    cursor: none;
 }
 
 

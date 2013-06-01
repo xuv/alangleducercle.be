@@ -158,6 +158,7 @@ $(document).ready(function() {
 	chargeLesDessins(dessinUrlList);
 	waitTillReady();
 	$(".play button").click(function() {
+		$('body').fullscreen();
 		play = true;
 	});
 });
